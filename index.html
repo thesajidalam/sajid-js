@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>sajid-js — JavaScript Utility Toolkit</title>
+  <meta name="description" content="A dependency-free JavaScript utility toolkit with a live, interactive playground." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+  <style>
+    :root {
+      --bg: #0d1117;
+      --panel: #161b22;
+      --panel-2: #1f2630;
+      --border: #30363d;
+      --text: #e6edf3;
+      --muted: #8b949e;
+      --accent: #00d9ff;
+      --accent-2: #00ffaa;
+      --code-bg: #0a0e17;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    body { background: var(--bg); color: var(--text); min-height: 100vh; }
+    code, pre { font-family: "SF Mono", "Cascadia Code", Consolas, monospace; }
+
+    .topbar { display: flex; align-items: center; gap: 14px; padding: 18px 28px; border-bottom: 1px solid var(--border); background: var(--panel); }
+    .logo { font-size: 22px; font-weight: 800; letter-spacing: -0.5px; }
+    .logo span { background: linear-gradient(90deg, var(--accent), var(--accent-2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .tagline { color: var(--muted); font-size: 13px; }
+
+    .layout { display: grid; grid-template-columns: 260px 1fr; gap: 24px; max-width: 1100px; margin: 28px auto; padding: 0 24px; }
+
+    .group { margin-bottom: 26px; }
+    .group-title { text-transform: uppercase; font-size: 11px; letter-spacing: 1.2px; color: var(--muted); margin-bottom: 10px; }
+    .cat { display: flex; flex-direction: column; gap: 4px; }
+    .cat-btn { text-align: left; padding: 9px 12px; border-radius: 8px; border: 1px solid transparent; background: transparent; color: var(--text); cursor: pointer; font-size: 14px; transition: all 0.15s; }
+    .cat-btn:hover { background: var(--panel-2); }
+    .cat-btn.active { background: rgba(0, 217, 255, 0.12); border-color: var(--accent); color: var(--accent); }
+
+    .main { display: flex; flex-direction: column; gap: 20px; }
+    .card { background: var(--panel); border: 1px solid var(--border); border-radius: 14px; padding: 22px; }
+    .card h2 { font-size: 20px; margin-bottom: 6px; }
+    .card .desc { color: var(--muted); font-size: 14px; margin-bottom: 18px; }
+    .card label { display: block; font-size: 12px; color: var(--muted); margin: 14px 0 6px; }
+
+    input[type="text"], textarea {
+      width: 100%; background: var(--code-bg); border: 1px solid var(--border); color: var(--text);
+      border-radius: 8px; padding: 12px; font-size: 14px; font-family: "SF Mono", monospace; outline: none;
+    }
+    input[type="text"]:focus, textarea:focus { border-color: var(--accent); }
+    textarea { resize: vertical; min-height: 60px; }
+
+    .btn-row { display: flex; gap: 10px; margin-top: 14px; flex-wrap: wrap; }
+    .btn { padding: 11px 18px; border: none; border-radius: 9px; background: linear-gradient(90deg, var(--accent), #00a3cc); color: #04121a; font-weight: 700; cursor: pointer; font-size: 14px; transition: transform 0.1s; }
+    .btn:hover { transform: translateY(-1px); }
+    .btn.ghost { background: var(--panel-2); color: var(--text); border: 1px solid var(--border); }
+
+    .result { margin-top: 16px; background: var(--code-bg); border: 1px solid var(--border); border-radius: 10px; padding: 14px; }
+    .result-title { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+    .result pre { white-space: pre-wrap; word-break: break-word; color: var(--accent-2); font-size: 14px; }
+    .examples { margin-top: 16px; background: var(--panel-2); border-radius: 10px; padding: 12px; }
+    .examples summary { cursor: pointer; color: var(--muted); font-size: 13px; }
+    .examples ul { padding-left: 20px; margin-top: 8px; display: flex; flex-direction: column; gap: 4px; }
+    .examples li button { background: transparent; border: none; color: var(--accent); cursor: pointer; font-family: "SF Mono", monospace; font-size: 13px; padding: 2px 0; }
+    .examples li button:hover { text-decoration: underline; }
+
+    footer { text-align: center; color: var(--muted); padding: 30px; font-size: 13px; border-top: 1px solid var(--border); margin-top: 30px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .pills { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 2px; }
+    .pill { background: var(--panel-2); border: 1px solid var(--border); color: var(--muted); font-size: 12px; padding: 5px 10px; border-radius: 20px; }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="logo">⚡ sajid<span>-js</span></div>
+    <div class="tagline">dependency-free JavaScript utility toolkit</div>
+    <div style="margin-left:auto" class="pills">
+      <span class="pill">zero deps</span>
+      <span class="pill">browser + node</span>
+      <span class="pill">0 kB gzip*</span>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside>
+      <div class="group" id="categories"></div>
+      <div class="group">
+        <div class="group-title">Install</div>
+        <div class="cat">
+          <pre style="background:var(--code-bg);border:1px solid var(--border);border-radius:8px;padding:12px;font-size:13px;color:var(--accent-2)">&lt;script src="src/sajid.js"&gt;&lt;/script&gt;
+// → window.sajid</pre>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="card">
+        <h2 id="fn-name">—</h2>
+        <p class="desc" id="fn-desc">—</p>
+
+        <label for="fn-input">Input</label>
+        <textarea id="fn-input" spellcheck="false"></textarea>
+
+        <div class="btn-row">
+          <button class="btn" id="run-btn">▶ Run</button>
+          <button class="btn ghost" id="clear-btn">Clear</button>
+        </div>
+
+        <div class="result">
+          <div class="result-title">Output</div>
+          <pre id="output">—</pre>
+        </div>
+
+        <details class="examples">
+          <summary>Example inputs</summary>
+          <ul id="example-list"></ul>
+        </details>
+      </div>
+    </main>
+  </div>
+
+  <footer>
+    Built with JavaScript. Source on <a href="https://github.com/thesajidalam/sajid-js" target="_blank">GitHub</a> ·
+    <a href="https://github.com/thesajidalam" target="_blank">@thesajidalam</a>
+  </footer>
+
+  <script src="../src/sajid.js"></script>
+  <script>
+    const CATEGORIES = {
+      Arrays: [
+        ["shuffle", "Randomize the order of an array (Fisher–Yates)", ['[1,2,3,4,5,6,7,8]']],
+        ["pick", "Return a random element from an array", ['["a","b","c","d"]']],
+        ["unique", "Remove duplicate values", ['[1,1,2,3,3,3,4,5,5]']],
+        ["chunk", "Split an array into chunks of a given size", ['[1,2,3,4,5,6,7,8,9]', "3"]],
+        ["sortBy", "Sort objects by a key", ["[{name:'b',score:2},{name:'a',score:9},{name:'c',score:5}]", "'score'"]],
+        ["keyBy", "Convert an array of objects into a keyed object", ["[{id:1,name:'x'},{id:2,name:'y'}]", "'id'"]],
+      ],
+      Strings: [
+        ["capitalize", "Capitalize the first letter", ['"hello world"']],
+        ["pascalCase", "Convert to PascalCase", ['"hello world"']],
+        ["snakeCase", "Convert to snake_case", ['"Hello World"']],
+        ["truncate", "Truncate a string with ellipsis", ['"The quick brown fox jumps over the lazy dog"', "20"]],
+        ["isEmail", "Check if a string is a valid email", ['"sajid@example.com"']],
+        ["slugify", "Create a URL-friendly slug", ['"Hello, World! This is SAJID."']],
+      ],
+      Numbers: [
+        ["clamp", "Clamp a number between min and max", ["42", "0", "10"]],
+        ["formatNumber", "Format with thousands separators", ["1234567.891"]],
+        ["round", "Round to a number of decimal places", ["3.14159265", "2"]],
+        ["randInt", "Random integer between min and max (inclusive)", ["1", "100"]],
+        ["hash", "djb2 hash of a string (unsigned 32-bit)", ['"sajid.js.org"']],
+      ],
+      Objects: [
+        ["select", "Pick selected keys from an object", ["{a:1,b:2,c:3}", "['a','c']"]],
+        ["omit", "Omit selected keys from an object", ["{a:1,b:2,c:3}", "['b']"]],
+        ["isEmpty", "Check if an object has no keys", ["{}", "null"]],
+        ["deepClone", "Deep clone a JSON-safe value", ["{a:{b:[1,2,3]}}"]],
+      ],
+      Dates: [
+        ["toDateString", "Format a date as YYYY-MM-DD", ["new Date()"]],
+        ["timeAgo", "Relative time like '3 hours ago'", ["new Date(Date.now() - 3600*1000*3)"]],
+        ["daysBetween", "Days between two dates", ["new Date('2024-01-01')", "new Date('2024-03-01')"]],
+        ["startOfDay", "Start of day for a date", ["new Date('2024-06-15T14:30:00')"]],
+      ],
+      Async: [
+        ["debounce", "Debounce a function (wrap it)", ["() => { return 'debounced call'; }", "200"]],
+        ["throttle", "Throttle a function (wrap it)", ["() => { return 'throttled call'; }", "200"]],
+      ],
+    };
+
+    const sg = (typeof sajid !== "undefined") ? sajid : S;
+
+    const fnNameEl = document.getElementById("fn-name");
+    const fnDescEl = document.getElementById("fn-desc");
+    const inputEl = document.getElementById("fn-input");
+    const outputEl = document.getElementById("output");
+    const runBtn = document.getElementById("run-btn");
+    const clearBtn = document.getElementById("clear-btn");
+    const catEl = document.getElementById("categories");
+    const exEl = document.getElementById("example-list");
+
+    let currentFn = null;
+    let currentExamples = [];
+
+    function buildCategories() {
+      catEl.innerHTML = "";
+      for (const [cat, fns] of Object.entries(CATEGORIES)) {
+        const div = document.createElement("div");
+        div.className = "group";
+        div.innerHTML = `<div class="group-title">${cat}</div><div class="cat"></div>`;
+        const list = div.querySelector(".cat");
+        fns.forEach(([name, desc, ex]) => {
+          const b = document.createElement("button");
+          b.className = "cat-btn";
+          b.textContent = name;
+          b.onclick = () => selectFn(name, desc, ex);
+          list.appendChild(b);
+        });
+        catEl.appendChild(div);
+      }
+      // select first
+      const first = Object.values(CATEGORIES)[0][0];
+      selectFn(first[0], first[1], first[2]);
+    }
+
+    function selectFn(name, desc, examples) {
+      currentFn = name;
+      currentExamples = examples;
+      fnNameEl.innerHTML = `<code style="color:var(--accent)">${name}()</code>`;
+      fnDescEl.textContent = desc;
+      exEl.innerHTML = "";
+      examples.forEach((args) => {
+        const li = document.createElement("li");
+        const btn = document.createElement("button");
+        btn.textContent = name + "(" + args.join(", ") + ")";
+        btn.onclick = () => { inputEl.value = args.join("\n"); run(); };
+        li.appendChild(btn);
+        exEl.appendChild(li);
+      });
+      document.querySelectorAll(".cat-btn").forEach((b) => {
+        b.classList.toggle("active", b.textContent === name);
+      });
+    }
+
+    function parseArgs(raw) {
+      return raw.split("\n").map((line) => line.trim()).filter(Boolean)
+        .map((line) => {
+          if (/^[\d.\-]+$/.test(line)) return parseFloat(line);
+          try { return (new Function("return " + line))(); } catch (e) { return line; }
+        });
+    }
+
+    function run() {
+      try {
+        const args = parseArgs(inputEl.value);
+        const result = sg[currentFn](...args);
+        const shown = (typeof result === "function")
+          ? "[function]"
+          : JSON.stringify(result, null, 2);
+        outputEl.textContent = shown;
+        outputEl.style.color = "var(--accent-2)";
+      } catch (err) {
+        outputEl.textContent = "Error: " + err.message;
+        outputEl.style.color = "#ff6b6b";
+      }
+    }
+
+    runBtn.onclick = run;
+    clearBtn.onclick = () => { inputEl.value = ""; outputEl.textContent = "—"; };
+    inputEl.addEventListener("input", () => { try { run(); } catch (e) {} });
+
+    buildCategories();
+  </script>
+</body>
+</html>
