@@ -27,7 +27,7 @@
     .logo span { background: linear-gradient(90deg, var(--accent), var(--accent-2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
     .tagline { color: var(--muted); font-size: 13px; }
 
-    .layout { display: grid; grid-template-columns: 260px 1fr; gap: 24px; max-width: 1100px; margin: 28px auto; padding: 0 24px; }
+    .layout { display: grid; grid-template-columns: 260px 1fr; gap: 24px; max-width: 1100px; margin: 26px auto; padding: 0 24px; }
 
     .group { margin-bottom: 26px; }
     .group-title { text-transform: uppercase; font-size: 11px; letter-spacing: 1.2px; color: var(--muted); margin-bottom: 10px; }
@@ -65,6 +65,15 @@
 
     footer { text-align: center; color: var(--muted); padding: 30px; font-size: 13px; border-top: 1px solid var(--border); margin-top: 30px; }
     footer a { color: var(--accent); text-decoration: none; }
+    .hero { max-width: 1100px; margin: 30px auto 0; padding: 0 24px; }
+    .hero h1 { font-size: 34px; letter-spacing: -0.5px; margin-bottom: 10px; }
+    .hero h1 span { background: linear-gradient(90deg, var(--accent), var(--accent-2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .hero p { color: var(--muted); font-size: 16px; max-width: 640px; line-height: 1.6; }
+    .features { max-width: 1100px; margin: 24px auto 0; padding: 0 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+    .feature { background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 16px; }
+    .feature b { color: var(--accent); display: block; margin-bottom: 6px; font-size: 15px; }
+    .feature span { color: var(--muted); font-size: 13px; line-height: 1.5; }
+    .getstarted { max-width: 1100px; margin: 26px auto 0; padding: 0 24px; }
     .pills { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 2px; }
     .pill { background: var(--panel-2); border: 1px solid var(--border); color: var(--muted); font-size: 12px; padding: 5px 10px; border-radius: 20px; }
   </style>
@@ -76,9 +85,32 @@
     <div style="margin-left:auto" class="pills">
       <span class="pill">zero deps</span>
       <span class="pill">browser + node</span>
-      <span class="pill">0 kB gzip*</span>
+      <span class="pill">MIT</span>
     </div>
   </header>
+
+  <div class="hero">
+    <h1>Small, reliable JS helpers. <span>Zero dependencies.</span></h1>
+    <p><strong>sajid-js</strong> is a lean JavaScript utility library for building faster without the bloat. Grab a handful of battle-tested helpers for arrays, strings, numbers, objects, dates and async — or run them all live below.</p>
+  </div>
+
+  <div class="features">
+    <div class="feature"><b>⚡ Zero dependencies</b><span>Just plain JavaScript. One file, no build step, no node_modules to babysit.</span></div>
+    <div class="feature"><b>🌍 Browser + Node</b><span>UMD build works everywhere — a &lt;script&gt; tag or a require().</span></div>
+    <div class="feature"><b>🧩 30+ utilities</b><span>shuffle, slugify, clamp, debounce, timeAgo and more, each tree-shakeable.</span></div>
+    <div class="feature"><b>✅ Tested</b><span>Covered by a passing test suite (npm test) for reliability.</span></div>
+  </div>
+
+  <div class="getstarted">
+    <details class="examples">
+      <summary>🚀 Getting started for JS developers</summary>
+      <ul style="padding-left:20px;margin-top:10px;display:flex;flex-direction:column;gap:6px;color:var(--muted);font-size:14px">
+        <li><code style="color:var(--accent-2)">&lt;script src="src/sajid.js"&gt;&lt;/script&gt;</code> → <code style="color:var(--accent-2)">window.sajid</code></li>
+        <li><code style="color:var(--accent-2)">npm install sajid-js</code> → <code style="color:var(--accent-2)">const sajid = require('sajid-js')</code></li>
+        <li>Example: <code style="color:var(--accent-2)">sajid.slugify('Hello, World!')</code> → <code style="color:var(--accent-2)">"hello-world"</code></li>
+      </ul>
+    </details>
+  </div>
 
   <div class="layout">
     <aside>
@@ -87,7 +119,8 @@
         <div class="group-title">Install</div>
         <div class="cat">
           <pre style="background:var(--code-bg);border:1px solid var(--border);border-radius:8px;padding:12px;font-size:13px;color:var(--accent-2)">&lt;script src="src/sajid.js"&gt;&lt;/script&gt;
-// → window.sajid</pre>
+// → window.sajid
+npm install sajid-js</pre>
         </div>
       </div>
     </aside>
