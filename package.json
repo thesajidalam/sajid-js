@@ -1,12 +1,26 @@
 {
   "name": "sajid-js",
-  "version": "1.0.0",
-  "description": "A modern, dependency-free JavaScript utility toolkit with a live playground.",
+  "version": "1.2.0",
+  "description": "A modern, dependency-free JavaScript utility toolkit with 65+ helpers for arrays, strings, numbers, objects, dates and async — plus a live browser playground.",
   "main": "src/sajid.js",
   "scripts": {
     "test": "node test/test.js"
   },
-  "keywords": ["utility", "toolkit", "helpers", "javascript", "zero-dependency"],
+  "keywords": [
+    "utility",
+    "toolkit",
+    "helpers",
+    "javascript",
+    "zero-dependency",
+    "lodash",
+    "arrays",
+    "strings",
+    "dates",
+    "async"
+  ],
   "license": "MIT",
-  "files": ["src/sajid.js"]
+  "files": ["src/sajid.js"],
+  "engines": {
+    "node": ">=12"
+  }
 }

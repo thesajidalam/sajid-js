@@ -26,6 +26,8 @@
     .logo { font-size: 22px; font-weight: 800; letter-spacing: -0.5px; }
     .logo span { background: linear-gradient(90deg, var(--accent), var(--accent-2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
     .tagline { color: var(--muted); font-size: 13px; }
+    .gh-btn { margin-left: auto; display: inline-flex; align-items: center; gap: 7px; padding: 8px 14px; border-radius: 8px; background: var(--panel-2); border: 1px solid var(--border); color: var(--text); font-size: 13px; font-weight: 600; text-decoration: none; transition: all 0.15s; }
+    .gh-btn:hover { border-color: var(--accent); color: var(--accent); }
 
     .layout { display: grid; grid-template-columns: 260px 1fr; gap: 24px; max-width: 1100px; margin: 26px auto; padding: 0 24px; }
 
@@ -82,11 +84,12 @@
   <header class="topbar">
     <div class="logo">⚡ sajid<span>-js</span></div>
     <div class="tagline">dependency-free JavaScript utility toolkit</div>
-    <div style="margin-left:auto" class="pills">
+    <div class="pills">
       <span class="pill">zero deps</span>
       <span class="pill">browser + node</span>
       <span class="pill">MIT</span>
     </div>
+    <a class="gh-btn" href="https://github.com/thesajidalam/sajid-js" target="_blank">★ View on GitHub</a>
   </header>
 
   <div class="hero">
@@ -97,7 +100,7 @@
   <div class="features">
     <div class="feature"><b>⚡ Zero dependencies</b><span>Just plain JavaScript. One file, no build step, no node_modules to babysit.</span></div>
     <div class="feature"><b>🌍 Browser + Node</b><span>UMD build works everywhere — a &lt;script&gt; tag or a require().</span></div>
-    <div class="feature"><b>🧩 30+ utilities</b><span>shuffle, slugify, clamp, debounce, timeAgo and more, each tree-shakeable.</span></div>
+    <div class="feature"><b>🧩 65+ utilities</b><span>shuffle, slugify, clamp, debounce, memoize, timeAgo and more, each tree-shakeable.</span></div>
     <div class="feature"><b>✅ Tested</b><span>Covered by a passing test suite (npm test) for reliability.</span></div>
   </div>
 
@@ -166,37 +169,73 @@ npm install sajid-js</pre>
         ["chunk", "Split an array into chunks of a given size", ['[1,2,3,4,5,6,7,8,9]', "3"]],
         ["sortBy", "Sort objects by a key", ["[{name:'b',score:2},{name:'a',score:9},{name:'c',score:5}]", "'score'"]],
         ["keyBy", "Convert an array of objects into a keyed object", ["[{id:1,name:'x'},{id:2,name:'y'}]", "'id'"]],
+        ["flatten", "Flatten an array one level deep", ['[1,[2,3],[4,[5]]]']],
+        ["range", "Generate an array of numbers", ["1", "10"]],
+        ["compact", "Remove falsy values", ["[0,1,'',2,null,3,false]"]],
+        ["first", "First element (or fallback)", ["['a','b','c']"]],
+        ["last", "Last element (or fallback)", ["['a','b','c']"]],
+        ["groupBy", "Group objects by a key", ["[{t:'a',v:1},{t:'a',v:2},{t:'b',v:3}]", "'t'"]],
+        ["intersection", "Unique shared values", ["[1,2,3,3]", "[2,3,4]"]],
       ],
       Strings: [
         ["capitalize", "Capitalize the first letter", ['"hello world"']],
         ["pascalCase", "Convert to PascalCase", ['"hello world"']],
+        ["camelCase", "Convert to camelCase", ['"hello world"']],
         ["snakeCase", "Convert to snake_case", ['"Hello World"']],
-        ["truncate", "Truncate a string with ellipsis", ['"The quick brown fox jumps over the lazy dog"', "20"]],
-        ["isEmail", "Check if a string is a valid email", ['"sajid@example.com"']],
+        ["kebabCase", "Convert to kebab-case", ['"HelloWorld"']],
+        ["titleCase", "Convert to Title Case", ['"hello WORLD"']],
         ["slugify", "Create a URL-friendly slug", ['"Hello, World! This is SAJID."']],
+        ["truncate", "Truncate a string with ellipsis", ['"The quick brown fox jumps over the lazy dog"', "20"]],
+        ["reverse", "Reverse a string", ['"hello"']],
+        ["countOccurrences", "Count occurrences of a substring", ['"a-b-a-b-c"', '"-"']],
+        ["mask", "Mask a string (keep last N)", ['"1234567890"', "4"]],
+        ["escapeRegExp", "Escape a string for RegExp use", ['"a.b+c"']],
+        ["pad", "Pad a string to a length", ['"1"', "3", '"0"']],
+        ["isEmail", "Check if a string is a valid email", ['"sajid@example.com"']],
       ],
       Numbers: [
         ["clamp", "Clamp a number between min and max", ["42", "0", "10"]],
         ["formatNumber", "Format with thousands separators", ["1234567.891"]],
         ["round", "Round to a number of decimal places", ["3.14159265", "2"]],
         ["randInt", "Random integer between min and max (inclusive)", ["1", "100"]],
+        ["randomFloat", "Random float between bounds", ["0", "1"]],
+        ["sum", "Sum an array of numbers", ["[1,2,3,4,5]"]],
+        ["average", "Average of numbers", ["[10,20,30,40]"]],
+        ["isEven", "Is a number even?", ["42"]],
+        ["isOdd", "Is a number odd?", ["42"]],
+        ["inRange", "Inclusive range check", ["5", "1", "10"]],
         ["hash", "djb2 hash of a string (unsigned 32-bit)", ['"sajid.js.org"']],
+        ["parseIntSafe", "Safely parse an integer", ['"42"', "0"]],
       ],
       Objects: [
         ["select", "Pick selected keys from an object", ["{a:1,b:2,c:3}", "['a','c']"]],
         ["omit", "Omit selected keys from an object", ["{a:1,b:2,c:3}", "['b']"]],
-        ["isEmpty", "Check if an object has no keys", ["{}", "null"]],
+        ["pickBy", "Filter entries by predicate", ["{a:1,b:2,c:5}", "v => v > 1"]],
+        ["mapValues", "Transform values, keep keys", ["{a:1,b:2}", "v => v * 10"]],
+        ["merge", "Shallow-merge objects", ["{a:1}", "{b:2}", "{a:9}"]],
+        ["invert", "Swap keys and values", ["{a:1,b:2}"]],
+        ["isEmpty", "Check if an object has no keys", ["{}"]],
+        ["get", "Safe nested read via path", ["{a:{b:{c:42}}}", "'a.b.c'", "'none'"]],
+        ["set", "Set a nested value via path", ["{}", "'a.b.c'", "42"]],
         ["deepClone", "Deep clone a JSON-safe value", ["{a:{b:[1,2,3]}}"]],
       ],
       Dates: [
         ["toDateString", "Format a date as YYYY-MM-DD", ["new Date()"]],
+        ["formatDate", "Format a date, optionally with time", ["new Date()", "true"]],
         ["timeAgo", "Relative time like '3 hours ago'", ["new Date(Date.now() - 3600*1000*3)"]],
         ["daysBetween", "Days between two dates", ["new Date('2024-01-01')", "new Date('2024-03-01')"]],
+        ["addDays", "Shift a date by N days", ["new Date('2024-01-31')", "3"]],
         ["startOfDay", "Start of day for a date", ["new Date('2024-06-15T14:30:00')"]],
+        ["isToday", "Is this today?", ["new Date()"]],
+        ["isLeapYear", "Is it a leap year?", ["2024"]],
       ],
       Async: [
         ["debounce", "Debounce a function (wrap it)", ["() => { return 'debounced call'; }", "200"]],
         ["throttle", "Throttle a function (wrap it)", ["() => { return 'throttled call'; }", "200"]],
+        ["pipe", "Compose functions left-to-right", ["(x => x + 1)", "(x => x * 2)", "3"]],
+        ["memoize", "Cache results by arguments", ["(x => { return x * 2; })", "5"]],
+        ["once", "Run a function only once", ["() => 42", "1", "2", "3"]],
+        ["sleep", "Awaitable delay (returns after ms)", ["50"]],
       ],
     };
 

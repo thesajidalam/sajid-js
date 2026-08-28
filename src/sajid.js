@@ -66,6 +66,53 @@
     return map;
   };
 
+  /** Flatten a nested array one level deep. */
+  S.flatten = function (arr) {
+    return arr.reduce((acc, item) => acc.concat(item), []);
+  };
+
+  /** Return an array of numbers from `start` to `end` (inclusive). */
+  S.range = function (start, end, step = 1) {
+    const out = [];
+    if (end === undefined) {
+      end = start;
+      start = 0;
+    }
+    for (let i = start; i <= end; i += step) out.push(i);
+    return out;
+  };
+
+  /** Remove falsy values (false, null, 0, "", undefined, NaN). */
+  S.compact = function (arr) {
+    return arr.filter(Boolean);
+  };
+
+  /** Last element of an array (or a default if empty). */
+  S.last = function (arr, fallback) {
+    return arr.length ? arr[arr.length - 1] : fallback;
+  };
+
+  /** Group array items by a key function or key name. */
+  S.groupBy = function (arr, key) {
+    const isFn = typeof key === "function";
+    return arr.reduce((map, item) => {
+      const k = isFn ? key(item) : item[key];
+      (map[k] = map[k] || []).push(item);
+      return map;
+    }, {});
+  };
+
+  /** Intersection of two arrays (unique shared values). */
+  S.intersection = function (a, b) {
+    const set = new Set(b);
+    return [...new Set(a)].filter((x) => set.has(x));
+  };
+
+  /** First element of an array (or a default if empty). */
+  S.first = function (arr, fallback) {
+    return arr.length ? arr[0] : fallback;
+  };
+
   /* ============ Strings ============ */
 
   /** Capitalize the first letter of a string. */
@@ -113,6 +160,63 @@
       .replace(/^-+|-+$/g, "");
   };
 
+  /** Convert "HelloWorld" / "hello_world" to "hello-world". */
+  S.kebabCase = function (str) {
+    return S.snakeCase(str).replace(/_/g, "-");
+  };
+
+  /** Convert "hello world" to "helloWorld". */
+  S.camelCase = function (str) {
+    const words = str
+      .replace(/([a-z0-9])([A-Z])/g, "$1 $2")
+      .toLowerCase()
+      .replace(/[_\s-]+/g, " ")
+      .trim()
+      .split(" ");
+    return words[0] + words.slice(1).map((w) => S.capitalize(w)).join("");
+  };
+
+  /** Title Case: "hello world" -> "Hello World". */
+  S.titleCase = function (str) {
+    return str
+      .toLowerCase()
+      .replace(/[_\s-]+/g, " ")
+      .split(" ")
+      .filter(Boolean)
+      .map((w) => S.capitalize(w))
+      .join(" ");
+  };
+
+  /** Reverse a string. */
+  S.reverse = function (str) {
+    return str.split("").reverse().join("");
+  };
+
+  /** Count occurrences of a substring. */
+  S.countOccurrences = function (str, sub) {
+    if (!sub) return 0;
+    return str.split(sub).length - 1;
+  };
+
+  /** Mask a string, showing only the last `visible` characters. */
+  S.mask = function (str, visible = 4, maskChar = "*") {
+    if (str.length <= visible) return str;
+    return maskChar.repeat(str.length - visible) + str.slice(-visible);
+  };
+
+  /** Escape a string for safe use in a RegExp. */
+  S.escapeRegExp = function (str) {
+    return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  };
+
+  /** Pad a string to a given length from either side (default left). */
+  S.pad = function (str, length, char = " ", left = true) {
+    if (str.length >= length) return str;
+    const pad = char.repeat(length - str.length);
+    if (left) return pad + str;
+    return str + pad;
+  };
+
   /* ============ Numbers ============ */
 
   /** Clamp a number between min and max. */
@@ -143,6 +247,42 @@
       h = (h * 33) ^ str.charCodeAt(i);
     }
     return h >>> 0;
+  };
+
+  /** Check if a number is within [min, max] (inclusive). */
+  S.inRange = function (num, min, max) {
+    return num >= min && num <= max;
+  };
+
+  /** Random float between min and max. */
+  S.randomFloat = function (min = 0, max = 1) {
+    return Math.random() * (max - min) + min;
+  };
+
+  /** Sum of an array of numbers. */
+  S.sum = function (arr) {
+    return arr.reduce((a, b) => a + (b || 0), 0);
+  };
+
+  /** Average of an array of numbers. */
+  S.average = function (arr) {
+    return arr.length ? S.sum(arr) / arr.length : 0;
+  };
+
+  /** True if a number is even. */
+  S.isEven = function (num) {
+    return num % 2 === 0;
+  };
+
+  /** True if a number is odd. */
+  S.isOdd = function (num) {
+    return num % 2 !== 0;
+  };
+
+  /** Parse an int safely, returning a fallback on failure. */
+  S.parseIntSafe = function (value, fallback = NaN) {
+    const n = parseInt(value, 10);
+    return isNaN(n) ? fallback : n;
   };
 
   /* ============ Objects ============ */
@@ -176,6 +316,62 @@
   /** Check if an object is empty (no own enumerable keys). */
   S.isEmpty = function (obj) {
     return Object.keys(obj).length === 0;
+  };
+
+  /** Shallow-merge multiple objects (later sources win). */
+  S.merge = function (...objs) {
+    return Object.assign({}, ...objs);
+  };
+
+  /** Get a nested value via dot path, with a fallback. */
+  S.get = function (obj, path, fallback) {
+    const keys = Array.isArray(path) ? path : String(path).split(".");
+    let cur = obj;
+    for (const k of keys) {
+      if (cur == null) return fallback;
+      cur = cur[k];
+    }
+    return cur === undefined ? fallback : cur;
+  };
+
+  /** Set a nested value via dot path (creates intermediate objects). */
+  S.set = function (obj, path, value) {
+    const keys = Array.isArray(path) ? path : String(path).split(".");
+    let cur = obj;
+    for (let i = 0; i < keys.length - 1; i++) {
+      const k = keys[i];
+      if (cur[k] == null || typeof cur[k] !== "object") cur[k] = {};
+      cur = cur[k];
+    }
+    cur[keys[keys.length - 1]] = value;
+    return obj;
+  };
+
+  /** Filter an object's entries by a predicate. */
+  S.pickBy = function (obj, predicate) {
+    const out = {};
+    for (const [k, v] of Object.entries(obj)) {
+      if (predicate(v, k)) out[k] = v;
+    }
+    return out;
+  };
+
+  /** Map the values of an object while keeping its keys. */
+  S.mapValues = function (obj, fn) {
+    const out = {};
+    for (const [k, v] of Object.entries(obj)) {
+      out[k] = fn(v, k);
+    }
+    return out;
+  };
+
+  /** Swap an object's keys and values. */
+  S.invert = function (obj) {
+    const out = {};
+    for (const [k, v] of Object.entries(obj)) {
+      out[v] = k;
+    }
+    return out;
   };
 
   /* ============ Dates ============ */
@@ -218,6 +414,38 @@
   S.daysBetween = function (a, b) {
     const ms = Math.abs(new Date(a) - new Date(b));
     return Math.floor(ms / 86400000);
+  };
+
+  /** Add a number of days to a date (returns a new Date). */
+  S.addDays = function (date, days) {
+    const d = new Date(date);
+    d.setDate(d.getDate() + days);
+    return d;
+  };
+
+  /** True if a date is today. */
+  S.isToday = function (date) {
+    const d = new Date(date);
+    const n = new Date();
+    return (
+      d.getFullYear() === n.getFullYear() &&
+      d.getMonth() === n.getMonth() &&
+      d.getDate() === n.getDate()
+    );
+  };
+
+  /** True if a year is a leap year. */
+  S.isLeapYear = function (year) {
+    return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
+  };
+
+  /** Format a date as "YYYY-MM-DD HH:MM". */
+  S.formatDate = function (date, withTime = false) {
+    const d = new Date(date);
+    const pad = (n) => String(n).padStart(2, "0");
+    let out = `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
+    if (withTime) out += ` ${pad(d.getHours())}:${pad(d.getMinutes())}`;
+    return out;
   };
 
   /* ============ Async / Decorators ============ */
@@ -268,6 +496,64 @@
         setTimeout(() => reject(new Error(message)), ms)
       ),
     ]);
+  };
+
+  /** Sleep (await) for a number of milliseconds. */
+  S.sleep = function (ms) {
+    return new Promise((resolve) => setTimeout(resolve, ms));
+  };
+
+  /** Memoize a function's results by serialized arguments. */
+  S.memoize = function (fn) {
+    const cache = new Map();
+    return function (...args) {
+      const key = JSON.stringify(args);
+      if (cache.has(key)) return cache.get(key);
+      const result = fn.apply(this, args);
+      cache.set(key, result);
+      return result;
+    };
+  };
+
+  /** Wrap a function so it only runs once. */
+  S.once = function (fn) {
+    let called = false;
+    let result;
+    return function (...args) {
+      if (called) return result;
+      called = true;
+      result = fn.apply(this, args);
+      return result;
+    };
+  };
+
+  /** Compose functions left-to-right (Lodash flow). */
+  S.pipe = function (...fns) {
+    return function (initial) {
+      return fns.reduce((acc, fn) => fn(acc), initial);
+    };
+  };
+
+  /** Map an iterable with a concurrency limit. */
+  S.asyncMap = async function (items, limit, mapper) {
+    const results = new Array(items.length);
+    let index = 0;
+    const workers = Array(Math.min(limit, items.length))
+      .fill(0)
+      .map(async () => {
+        while (true) {
+          const i = index++;
+          if (i >= items.length) break;
+          results[i] = await mapper(items[i], i);
+        }
+      });
+    await Promise.all(workers);
+    return results;
+  };
+
+  /** Run async functions in parallel, resolving all results. */
+  S.parallel = function (fns) {
+    return Promise.all(fns.map((fn) => (typeof fn === "function" ? fn() : fn)));
   };
 
   return S;
