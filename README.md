@@ -6,9 +6,9 @@ Static deployment repository for **[sajid.js.org](https://sajid.js.org)**.
 
 This repository holds the **compiled static output** of the website published at `sajid.js.org`. It is maintained entirely by an automated GitHub Actions workflow and is not edited by hand.
 
-- **Content is generated** — every file here is produced by a build pipeline. Manual changes are overwritten on the next deployment.
-- **Deployments** — triggered automatically on updates from the source pipeline.
-- **Hosting** — served via GitHub Pages from the `main` branch.
+- **Content is generated** â every file here is produced by a build pipeline. Manual changes are overwritten on the next deployment.
+- **Deployments** â triggered automatically on updates from the source pipeline.
+- **Hosting** â served via GitHub Pages from the `main` branch.
 
 ## Structure
 
