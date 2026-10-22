@@ -1,0 +1,380 @@
+{
+    "items":  [
+                  {
+                      "id":  "jsonforge",
+                      "tech":  [
+                                   "HTML",
+                                   "CSS",
+                                   "JavaScript",
+                                   "TypeScript",
+                                   "Vite"
+                               ],
+                      "thumbnail":  "/thumbnails/jsonforge.svg",
+                      "title":  "JsonForge",
+                      "tags":  [
+                                   "json",
+                                   "formatter",
+                                   "validator",
+                                   "developer-tools",
+                                   "toolkit"
+                               ],
+                      "category":  "Developer Tools",
+                      "featured":  true,
+                      "description":  "Professional JSON toolkit - format, validate, tree view, diff, convert. 6 themes, zero dependencies, fully client-side.",
+                      "status":  "opensource",
+                      "longDescription":  "The most powerful JSON formatter, validator, and toolkit for developers. Format, validate, transform, and inspect JSON instantly with zero dependencies.",
+                      "priority":  1,
+                      "date":  "2026-10-01",
+                      "metrics":  {
+                                      "Client-side":  "Yes",
+                                      "Dependencies":  "0",
+                                      "Themes":  "6"
+                                  },
+                      "links":  {
+                                    "live":  "https://json-forge.sajidalamhere.workers.dev",
+                                    "github":  "https://github.com/thesajidalam/json-forge"
+                                }
+                  },
+                  {
+                      "id":  "devfolio-scoring",
+                      "tech":  [
+                                   "Next.js 15",
+                                   "TypeScript 5.7",
+                                   "React 19",
+                                   "Tailwind CSS 3",
+                                   "Supabase",
+                                   "PostgreSQL",
+                                   "Vercel"
+                               ],
+                      "thumbnail":  "/thumbnails/devfolio.svg",
+                      "title":  "DevFolio",
+                      "tags":  [
+                                   "nextjs",
+                                   "portfolio",
+                                   "scoring",
+                                   "developer-platform",
+                                   "typescript"
+                               ],
+                      "category":  "Web Development",
+                      "featured":  true,
+                      "description":  "Scoring and discovery platform for developer portfolios. Evaluates across 6 dimensions with transparent scoring.",
+                      "status":  "opensource",
+                      "longDescription":  "A scoring and discovery platform for developer portfolios. Every portfolio submitted is automatically evaluated across six dimensions - performance, accessibility, SEO, best practices, design, and content - with a transparent, versioned algorithm. Browse curated portfolios, filter by technology, compare side-by-side, check health status, and grab an embeddable score badge.",
+                      "priority":  1,
+                      "date":  "2026-10-01",
+                      "links":  {
+                                    "live":  "https://gitdevfolio.vercel.app",
+                                    "github":  "https://github.com/thesajidalam/developer-portfolio"
+                                }
+                  },
+                  {
+                      "id":  "vibeguard",
+                      "title":  "vibeguard — AI Code Guard",
+                      "description":  "The AI code reality check. A zero-dependency pre-commit guard with 10 deterministic rules, plus a browser-based AI Studio that hunts bugs and vulnerabilities.",
+                      "longDescription":  "vibeguard is a pre-commit guard for your terminal plus a browser-based AI Studio — without ever uploading your keys or your code. The CLI uses ten deterministic rules tuned for what LLMs repeat most: empty catch blocks that swallow errors, null derefs from .find() and JSON.parse(), invented env vars, hardcoded API keys, and sleep-hack \u0027fixes\u0027 that hide races. Errors block the commit with a red exit code; warnings are logged and watched. The AI Studio layers an optional deep dive on top — seven modes (bug finder, security audit, fix \u0026 explain, API \u0026 deployment, full audit report, and Website Scanner, which takes any live URL and audits the grabbed page for web vulnerabilities) with a Risk Score /100 and line-level fixes. It ships with eight free-tier providers (Gemini, Groq, OpenRouter, Cerebras, Mistral, GitHub Models, NVIDIA NIM, plus custom OpenAI-compatible endpoints), takes input by paste, file upload, live GitHub repo fetch, or live website scan, downloads reports as Markdown, HTML, or JSON, and stores API keys only in your browser\u0027s localStorage behind a stateless relay.",
+                      "category":  "Developer Tools",
+                      "status":  "opensource",
+                      "featured":  true,
+                      "priority":  1,
+                      "thumbnail":  "/thumbnails/vibeguard.svg",
+                      "tech":  [
+                                   "JavaScript",
+                                   "Node.js",
+                                   "Gemini API",
+                                   "Groq",
+                                   "OpenRouter",
+                                   "Vercel"
+                               ],
+                      "links":  {
+                                    "live":  "https://guardvibe.vercel.app",
+                                    "github":  "https://github.com/thesajidalam/vibeguard"
+                                },
+                      "metrics":  {
+                                      "Rules":  "10",
+                                      "Tests":  "48",
+                                      "Providers":  "8",
+                                      "Dependencies":  "0"
+                                  },
+                      "tags":  [
+                                   "ai",
+                                   "security",
+                                   "code-quality",
+                                   "pre-commit",
+                                   "developer-tools",
+                                   "nodejs"
+                               ],
+                      "date":  "2026-08-02"
+                  },
+                  {
+                      "id":  "smscontroller",
+                      "title":  "SMSController",
+                      "description":  "Android app to remotely control a device via SMS commands. Supports location tracking, camera capture, call logs, SIM info, and more.",
+                      "longDescription":  "An Android application built with Kotlin that lets you control a target device remotely through SMS commands. Features include real-time GPS location tracking, front/rear camera capture, call log retrieval, SIM card info, hard reset, and flash toggle. Designed for offline environments where internet isn\u0027t available.",
+                      "category":  "Mobile Development",
+                      "status":  "production",
+                      "featured":  true,
+                      "priority":  2,
+                      "thumbnail":  "/thumbnails/smscontroller.svg",
+                      "tech":  [
+                                   "Kotlin",
+                                   "Android SDK",
+                                   "SMS Manager",
+                                   "Camera API",
+                                   "Location API"
+                               ],
+                      "links":  {
+                                    "github":  "https://github.com/thesajidalam/SMSController"
+                                },
+                      "tags":  [
+                                   "android",
+                                   "kotlin",
+                                   "sms",
+                                   "remote-control",
+                                   "offline"
+                               ],
+                      "date":  "2025-11-20"
+                  },
+                  {
+                      "id":  "nothing-gallery-port",
+                      "title":  "Nothing Gallery Port",
+                      "description":  "Port of Nothing OS Gallery app with enhanced features. Clean, minimal gallery experience inspired by Nothing\u0027s design language.",
+                      "longDescription":  "A port of the Nothing Gallery application featuring Nothing OS design philosophy — monochrome accents, clean typography, and smooth transitions. Built for Android devices with Material You support.",
+                      "category":  "Mobile Development",
+                      "status":  "opensource",
+                      "featured":  true,
+                      "priority":  3,
+                      "thumbnail":  "/thumbnails/nothing-gallery.svg",
+                      "tech":  [
+                                   "Kotlin",
+                                   "Android SDK",
+                                   "Jetpack Compose",
+                                   "Material You"
+                               ],
+                      "links":  {
+                                    "github":  "https://github.com/thesajidalam/nothinggalleryport"
+                                },
+                      "tags":  [
+                                   "android",
+                                   "gallery",
+                                   "nothing-os",
+                                   "kotlin"
+                               ],
+                      "date":  "2025-10-05"
+                  },
+                  {
+                      "id":  "gamified-learning",
+                      "title":  "QuestLearn — Gamified Learning Platform",
+                      "description":  "Next.js platform that turns learning into RPG-style quests with XP, levels, leaderboards, and interactive challenges.",
+                      "longDescription":  "A gamified learning application built with Next.js and TypeScript. Users complete coding challenges and quizzes to earn experience points, level up, and climb leaderboards. Features include quest chains, achievements, daily streaks, and a progress dashboard.",
+                      "category":  "Web Development",
+                      "status":  "opensource",
+                      "featured":  true,
+                      "priority":  4,
+                      "thumbnail":  "/thumbnails/gamified-learning.svg",
+                      "tech":  [
+                                   "Next.js",
+                                   "TypeScript",
+                                   "Tailwind CSS",
+                                   "PostgreSQL",
+                                   "Prisma",
+                                   "Framer Motion"
+                               ],
+                      "links":  {
+                                    "github":  "https://github.com/thesajidalam/Gamified-Learning"
+                                },
+                      "tags":  [
+                                   "nextjs",
+                                   "gamification",
+                                   "education",
+                                   "typescript"
+                               ],
+                      "date":  "2025-09-15"
+                  },
+                  {
+                      "id":  "medrush-website",
+                      "title":  "MedRush App Website",
+                      "description":  "Landing page for MedRush healthcare app with modern UI, smooth interactions, and mobile-first responsive design.",
+                      "longDescription":  "A promotional website for the MedRush healthcare application. Features a clean, trustworthy design with app showcase sections, feature highlights, and clear CTAs. Built to communicate reliability and modern healthcare access.",
+                      "category":  "Web Development",
+                      "status":  "production",
+                      "featured":  true,
+                      "priority":  5,
+                      "thumbnail":  "/thumbnails/medrush.svg",
+                      "tech":  [
+                                   "HTML",
+                                   "CSS",
+                                   "JavaScript"
+                               ],
+                      "links":  {
+                                    "live":  "https://thesajidalam.github.io/MedRush-App-Website/",
+                                    "github":  "https://github.com/thesajidalam/MedRush-App-Website"
+                                },
+                      "tags":  [
+                                   "landing-page",
+                                   "healthcare",
+                                   "responsive"
+                               ],
+                      "date":  "2025-08-20"
+                  },
+                  {
+                      "id":  "portfolio",
+                      "title":  "Personal Portfolio",
+                      "description":  "My portfolio site built with React, Vite, and Tailwind. Features canvas particle networks, dark/light themes, and Web3Forms contact.",
+                      "longDescription":  "A modern, single-page portfolio showcasing my work, skills, and certifications. Built with React 19 and Framer Motion for smooth page transitions. Features a particle network canvas animation, toggleable dark/light theme, typewriter effect, and a working contact form powered by Web3Forms.",
+                      "category":  "Web Development",
+                      "status":  "production",
+                      "featured":  true,
+                      "priority":  6,
+                      "thumbnail":  "/thumbnails/portfolio.svg",
+                      "tech":  [
+                                   "React",
+                                   "Vite",
+                                   "Tailwind CSS",
+                                   "Framer Motion",
+                                   "TypeScript"
+                               ],
+                      "links":  {
+                                    "live":  "https://www.sajidalam.pages.dev",
+                                    "github":  "https://github.com/thesajidalam/portfolio"
+                                },
+                      "tags":  [
+                                   "portfolio",
+                                   "react",
+                                   "vite",
+                                   "framer-motion"
+                               ],
+                      "date":  "2025-06-01"
+                  },
+                  {
+                      "id":  "chat-ui",
+                      "title":  "Modern Chat UI",
+                      "description":  "Sleek chat interface design with real-time messaging aesthetics, dark mode, and smooth animations.",
+                      "longDescription":  "An exploration of modern chat interface patterns. Features clean typography, message bubbles, online indicators, and micro-interactions that make the UI feel alive.",
+                      "category":  "UI Design",
+                      "status":  "opensource",
+                      "featured":  true,
+                      "priority":  7,
+                      "thumbnail":  "/thumbnails/chat-ui.svg",
+                      "tech":  [
+                                   "HTML",
+                                   "CSS",
+                                   "JavaScript"
+                               ],
+                      "links":  {
+                                    "live":  "https://thesajidalam.github.io/Chat-UI/",
+                                    "github":  "https://github.com/thesajidalam/Chat-UI"
+                                },
+                      "tags":  [
+                                   "ui-design",
+                                   "chat",
+                                   "frontend"
+                               ],
+                      "date":  "2025-05-10"
+                  },
+                  {
+                      "id":  "gemini-chatbot",
+                      "title":  "Gemini Chatbot",
+                      "description":  "Web chatbot powered by Google Gemini AI with a clean conversational interface and real-time responses.",
+                      "longDescription":  "A browser-based chatbot that interfaces with Google\u0027s Gemini AI API. Clean, minimal UI with streaming-style response rendering and conversation history.",
+                      "category":  "Web Development",
+                      "status":  "opensource",
+                      "featured":  false,
+                      "priority":  8,
+                      "thumbnail":  "/thumbnails/gemini-chatbot.svg",
+                      "tech":  [
+                                   "HTML",
+                                   "CSS",
+                                   "JavaScript",
+                                   "Gemini API"
+                               ],
+                      "links":  {
+                                    "live":  "https://thesajidalam.github.io/Gemini-Chatbot/",
+                                    "github":  "https://github.com/thesajidalam/Gemini-Chatbot"
+                                },
+                      "tags":  [
+                                   "ai",
+                                   "chatbot",
+                                   "api-integration"
+                               ],
+                      "date":  "2025-04-15"
+                  },
+                  {
+                      "id":  "modern-calculator",
+                      "title":  "Modern Calculator",
+                      "description":  "Beautifully designed calculator with a polished UI, keyboard support, and smooth animations.",
+                      "longDescription":  "A feature-rich calculator app focused on aesthetics and UX. Clean glass-morphism design with full keyboard input support and operation history.",
+                      "category":  "Web Development",
+                      "status":  "opensource",
+                      "featured":  false,
+                      "priority":  9,
+                      "thumbnail":  "/thumbnails/calculator.svg",
+                      "tech":  [
+                                   "HTML",
+                                   "CSS",
+                                   "JavaScript"
+                               ],
+                      "links":  {
+                                    "live":  "https://thesajidalam.github.io/Modern-Calculator/",
+                                    "github":  "https://github.com/thesajidalam/Modern-Calculator"
+                                },
+                      "tags":  [
+                                   "calculator",
+                                   "frontend",
+                                   "glassmorphism"
+                               ],
+                      "date":  "2025-03-20"
+                  },
+                  {
+                      "id":  "base64-encoder",
+                      "title":  "Base64 Encoder/Decoder",
+                      "description":  "Clean utility for Base64 encoding and decoding with support for both text and file input.",
+                      "longDescription":  "A no-fuss Base64 encoder/decoder tool. Paste text or upload files, get instant encoding. Handy for developers working with data URIs and API payloads.",
+                      "category":  "Developer Tools",
+                      "status":  "opensource",
+                      "featured":  false,
+                      "priority":  10,
+                      "thumbnail":  "/thumbnails/base64.svg",
+                      "tech":  [
+                                   "HTML",
+                                   "CSS",
+                                   "JavaScript"
+                               ],
+                      "links":  {
+                                    "live":  "https://thesajidalam.github.io/Base64-Encoder/",
+                                    "github":  "https://github.com/thesajidalam/Base64-Encoder"
+                                },
+                      "tags":  [
+                                   "developer-tools",
+                                   "encoding",
+                                   "utility"
+                               ],
+                      "date":  "2025-02-10"
+                  },
+                  {
+                      "id":  "ios-calculator",
+                      "title":  "iOS Calculator UI",
+                      "description":  "Pixel-perfect HTML/CSS recreation of the iOS calculator with realistic button interactions.",
+                      "longDescription":  "A faithful recreation of Apple\u0027s iOS calculator built entirely in HTML, CSS, and vanilla JS. Demonstrates attention to detail in UI replication — same grid, colors, and haptic-style button feedback.",
+                      "category":  "UI Design",
+                      "status":  "opensource",
+                      "featured":  false,
+                      "priority":  11,
+                      "thumbnail":  "/thumbnails/ios-calculator.svg",
+                      "tech":  [
+                                   "HTML",
+                                   "CSS",
+                                   "JavaScript"
+                               ],
+                      "links":  {
+                                    "live":  "https://thesajidalam.github.io/iOS-Calculator/",
+                                    "github":  "https://github.com/thesajidalam/iOS-Calculator"
+                                },
+                      "tags":  [
+                                   "ios",
+                                   "calculator",
+                                   "ui-replication"
+                               ],
+                      "date":  "2025-01-05"
+                  }
+              ]
+}

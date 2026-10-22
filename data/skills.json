@@ -1,0 +1,87 @@
+{
+  "categories": [
+    {
+      "id": "mobile",
+      "name": "Mobile Development",
+      "icon": "Smartphone",
+      "color": "#22D3EE",
+      "skills": [
+        { "name": "Kotlin", "level": 72, "years": 1, "icon": "kotlin", "featured": true },
+        { "name": "Android SDK", "level": 68, "years": 1, "icon": "android", "featured": true },
+        { "name": "Jetpack Compose", "level": 55, "years": 1, "icon": "compose", "featured": false },
+        { "name": "Android Studio", "level": 70, "years": 1, "icon": "studio", "featured": false }
+      ]
+    },
+    {
+      "id": "web",
+      "name": "Web Development",
+      "icon": "Layout",
+      "color": "#3B82F6",
+      "skills": [
+        { "name": "HTML", "level": 88, "years": 3, "icon": "html", "featured": true },
+        { "name": "CSS", "level": 82, "years": 3, "icon": "css", "featured": true },
+        { "name": "JavaScript", "level": 76, "years": 2, "icon": "javascript", "featured": true },
+        { "name": "TypeScript", "level": 60, "years": 1, "icon": "typescript", "featured": true },
+        { "name": "React", "level": 58, "years": 1, "icon": "react", "featured": true },
+        { "name": "Next.js", "level": 50, "years": 1, "icon": "nextjs", "featured": false },
+        { "name": "Tailwind CSS", "level": 70, "years": 1, "icon": "tailwind", "featured": true },
+        { "name": "Responsive Design", "level": 78, "years": 2, "icon": "responsive", "featured": false }
+      ]
+    },
+    {
+      "id": "programming",
+      "name": "Programming Languages",
+      "icon": "Code2",
+      "color": "#10B981",
+      "skills": [
+        { "name": "Python", "level": 70, "years": 2, "icon": "python", "featured": true },
+        { "name": "C++", "level": 60, "years": 1, "icon": "cpp", "featured": false },
+        { "name": "C", "level": 55, "years": 1, "icon": "c", "featured": false },
+        { "name": "Git", "level": 78, "years": 2, "icon": "git", "featured": true },
+        { "name": "GitHub", "level": 82, "years": 2, "icon": "github", "featured": true }
+      ]
+    },
+    {
+      "id": "iot",
+      "name": "IoT & Embedded",
+      "icon": "Cpu",
+      "color": "#F59E0B",
+      "skills": [
+        { "name": "ESP8266", "level": 75, "years": 1, "icon": "esp", "featured": true },
+        { "name": "Arduino", "level": 70, "years": 1, "icon": "arduino", "featured": true },
+        { "name": "Raspberry Pi", "level": 50, "years": 1, "icon": "raspberrypi", "featured": false },
+        { "name": "Sensors & Actuators", "level": 68, "years": 1, "icon": "sensors", "featured": false },
+        { "name": "Home Automation", "level": 72, "years": 1, "icon": "automation", "featured": false }
+      ]
+    },
+    {
+      "id": "security",
+      "name": "Security & Tools",
+      "icon": "Shield",
+      "color": "#8B5CF6",
+      "skills": [
+        { "name": "Linux", "level": 72, "years": 2, "icon": "linux", "featured": true },
+        { "name": "Burp Suite", "level": 55, "years": 1, "icon": "burp", "featured": false },
+        { "name": "Wireshark", "level": 50, "years": 1, "icon": "wireshark", "featured": false },
+        { "name": "SEO", "level": 65, "years": 1, "icon": "seo", "featured": false },
+        { "name": "App Store Optimization", "level": 60, "years": 1, "icon": "aso", "featured": false }
+      ]
+    },
+    {
+      "id": "design",
+      "name": "Design & Multimedia",
+      "icon": "Palette",
+      "color": "#EC4899",
+      "skills": [
+        { "name": "Figma", "level": 58, "years": 1, "icon": "figma", "featured": false },
+        { "name": "Adobe Photoshop", "level": 65, "years": 1, "icon": "photoshop", "featured": true },
+        { "name": "Adobe Premiere Pro", "level": 55, "years": 1, "icon": "premiere", "featured": false }
+      ]
+    }
+  ],
+  "meta": {
+    "totalYears": 2,
+    "primaryStack": ["HTML", "CSS", "JavaScript", "Kotlin", "Python", "ESP8266"],
+    "learning": ["Ethical Hacking", "Node.js", "Cloud Computing", "React Native"]
+  }
+}

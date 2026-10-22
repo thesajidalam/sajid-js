@@ -1,0 +1,58 @@
+{
+  "items": [
+    {
+      "id": "portfolio",
+      "name": "Portfolio",
+      "description": "Personal portfolio website showcasing projects and skills",
+      "language": "HTML",
+      "stars": 2,
+      "forks": 0,
+      "issues": 0,
+      "thumbnail": "/thumbnails/portfolio.svg",
+      "url": "https://github.com/thesajidalam/portfolio",
+      "featured": true,
+      "tags": ["portfolio", "website", "frontend"],
+      "stats": {
+        "downloads": "N/A",
+        "contributors": 1,
+        "latestRelease": "v1.0"
+      }
+    },
+    {
+      "id": "chat-ui",
+      "name": "Chat-UI",
+      "description": "Modern chat interface design with smooth animations",
+      "language": "HTML",
+      "stars": 1,
+      "forks": 0,
+      "issues": 0,
+      "thumbnail": "/thumbnails/chat-ui.svg",
+      "url": "https://github.com/thesajidalam/Chat-UI",
+      "featured": true,
+      "tags": ["ui", "chat", "frontend"],
+      "stats": {
+        "downloads": "N/A",
+        "contributors": 1,
+        "latestRelease": "v1.0"
+      }
+    },
+    {
+      "id": "gemini-chatbot",
+      "name": "Gemini-Chatbot",
+      "description": "Interactive chatbot powered by Google's Gemini AI",
+      "language": "JavaScript",
+      "stars": 1,
+      "forks": 0,
+      "issues": 0,
+      "thumbnail": "/thumbnails/gemini-chatbot.svg",
+      "url": "https://github.com/thesajidalam/Gemini-Chatbot",
+      "featured": false,
+      "tags": ["ai", "chatbot", "api"],
+      "stats": {
+        "downloads": "N/A",
+        "contributors": 1,
+        "latestRelease": "v1.0"
+      }
+    }
+  ]
+}

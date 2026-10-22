@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#062430"/>
+      <stop offset="1" stop-color="#0b1130"/>
+    </linearGradient>
+    <linearGradient id="tile" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#22d3ee"/>
+      <stop offset="1" stop-color="#3b82f6"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.4"/>
+      <stop offset="0.45" stop-color="#ffffff" stop-opacity="0.05"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" fill="url(#bg)"/>
+  <circle cx="560" cy="50" r="180" fill="#ffffff" opacity="0.05"/>
+  <circle cx="60" cy="330" r="220" fill="#3b82f6" opacity="0.08"/>
+  <g transform="translate(320 158)">
+    <rect x="-108" y="-108" width="216" height="216" rx="52" fill="url(#tile)"/>
+    <rect x="-108" y="-108" width="216" height="216" rx="52" fill="url(#shine)"/>
+    <rect x="-108" y="-108" width="216" height="216" rx="52" fill="none" stroke="#ffffff" stroke-opacity="0.28" stroke-width="1.5"/>
+    <path d="M -54 -40 H54 A14 14 0 0 1 68 -26 V14 A14 14 0 0 1 54 28 H16 L -12 46 L -6 28 H-54 A14 14 0 0 1 -68 14 V-26 A14 14 0 0 1 -54 -40 Z" fill="#ffffff"/>
+    <circle cx="-28" cy="-6" r="7.5" fill="url(#tile)"/>
+    <circle cx="0" cy="-6" r="7.5" fill="url(#tile)"/>
+    <circle cx="28" cy="-6" r="7.5" fill="url(#tile)"/>
+    <g transform="translate(60 52) scale(0.66)">
+      <path d="M -52 -36 H52 A14 14 0 0 1 66 -22 V14 A14 14 0 0 1 52 28 H14 L -12 46 L -6 28 H-52 A14 14 0 0 1 -66 14 V-22 A14 14 0 0 1 -52 -36 Z" fill="#ffffff"/>
+      <circle cx="-26" cy="-6" r="7" fill="url(#tile)"/>
+      <circle cx="0" cy="-6" r="7" fill="url(#tile)"/>
+      <circle cx="26" cy="-6" r="7" fill="url(#tile)"/>
+    </g>
+  </g>
+  <text x="320" y="326" font-family="Segoe UI,Arial,sans-serif" font-size="27" font-weight="600" fill="#ffffff" fill-opacity="0.94" text-anchor="middle">Chat UI</text>
+  <text x="320" y="350" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="500" fill="#7dd3fc" text-anchor="middle" opacity="0.9">Modern Chat Interface</text>
+</svg>

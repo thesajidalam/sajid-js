@@ -1,0 +1,105 @@
+{
+  "site": {
+    "title": "Sajid Alam | Full-Stack Developer & IoT Engineer",
+    "description": "Aspiring developer exploring IoT, Linux, embedded systems, and web security. Building real tools that work offline and online.",
+    "url": "https://sajid.js.org",
+    "language": "en",
+    "locale": "en_IN"
+  },
+  "author": {
+    "name": "Sajid Alam",
+    "role": "Full-Stack Developer & IoT Engineer",
+    "tagline": "Building what I can't find with code, circuits, and curiosity.",
+    "bio": "Tech Addict from Prayagraj, India. I build Android apps (Kotlin), IoT systems (ESP8266), and web tools. Linux drives my workflow, Burp Suite sharpens my security lens, and Photoshop handles the visuals. Currently pursuing B.Tech CSE at United Institute of Technology (AKTU) while shipping projects that blend offline-first design with clean UIs. Educated at Benhur High School & College (ICSE + ISC) and Crescent Convent School.",
+    "email": "sajidalamhere@gmail.com",
+    "location": "Prayagraj, Uttar Pradesh, India",
+    "timezone": "IST (UTC+5:30)",
+    "availability": "open",
+    "profileImage": "/images/profile2.png",
+    "altEmail": "sajidalam@outlook.in"
+  },
+  "navigation": {
+    "items": [
+      {
+        "label": "Home",
+        "path": "/",
+        "icon": "Home"
+      },
+      {
+        "label": "About",
+        "path": "/about",
+        "icon": "User"
+      },
+      {
+        "label": "Work",
+        "path": "/work",
+        "icon": "Briefcase"
+      },
+      {
+        "label": "Experience",
+        "path": "/experience",
+        "icon": "Building2"
+      },
+      {
+        "label": "Skills",
+        "path": "/skills",
+        "icon": "Code2"
+      },
+      {
+        "label": "Certifications",
+        "path": "/certifications",
+        "icon": "Award"
+      },
+      {
+        "label": "Resume",
+        "path": "/resume",
+        "icon": "FileText"
+      },
+      {
+        "label": "Contact",
+        "path": "/contact",
+        "icon": "Mail"
+      }
+    ]
+  },
+  "social": {
+    "github": "https://github.com/thesajidalam",
+    "linkedin": "https://linkedin.com/in/thesajidalam",
+    "twitter": "https://twitter.com/thesajidalam",
+    "instagram": "https://instagram.com/thesajidalam",
+    "telegram": "https://t.me/thesajidalam",
+    "pinterest": "https://pinterest.com/thesajidalam",
+    "linktree": "https://linktr.ee/thesajidalam",
+    "website": "https://sajid.js.org",
+    "email": "sajidalamhere@gmail.com"
+  },
+  "stats": {
+    "yearsExperience": 2,
+    "projectsCompleted": 15,
+    "githubRepos": 28,
+    "githubStars": "32",
+    "certifications": 9,
+    "articlesPublished": 0
+  },
+  "quickLinks": [
+    {
+      "label": "View Resume",
+      "path": "/resume",
+      "icon": "FileText"
+    },
+    {
+      "label": "Latest Work",
+      "path": "/work",
+      "icon": "Briefcase"
+    },
+    {
+      "label": "Get in Touch",
+      "path": "/contact",
+      "icon": "Mail"
+    }
+  ],
+  "theme": {
+    "default": "dark",
+    "allowToggle": true
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "items": [
+    {
+      "id": "uit-student",
+      "company": "United Institute of Technology",
+      "role": "B.Tech Student — Computer Science & Engineering",
+      "type": "full-time",
+      "location": "Prayagraj, Uttar Pradesh, India",
+      "startDate": "2025-08-01",
+      "endDate": null,
+      "current": true,
+      "description": "Pursuing a Bachelor of Technology in Computer Science and Engineering. Building a foundation in algorithms, data structures, and software engineering while shipping real projects on the side.",
+      "achievements": [
+        "Learning C++, Python, and core CS fundamentals through coursework",
+        "Building Android, IoT, and web projects outside the curriculum",
+        "Participating in coding competitions and technical events"
+      ],
+      "tech": ["C++", "Python", "Data Structures", "Algorithms", "Linux"],
+      "links": {}
+    },
+    {
+      "id": "self-learning",
+      "company": "Self-Directed Learning",
+      "role": "Independent Developer & Researcher",
+      "type": "part-time",
+      "location": "Remote",
+      "startDate": "2023-01-01",
+      "endDate": null,
+      "current": true,
+      "description": "Driven by curiosity — learning systems programming, Android development (Kotlin), IoT with ESP8266, and security tools. Every project starts with 'I wonder if I can build that.'",
+      "achievements": [
+        "Built 15+ projects across Android, web, IoT, and utilities",
+        "Earned 9 certifications in development, security, and open source",
+        "Active on GitHub with 28 repos and 32 stars"
+      ],
+      "tech": ["Kotlin", "Android SDK", "HTML", "CSS", "JavaScript", "Python", "ESP8266", "Git", "Linux"],
+      "links": {
+        "company": "https://github.com/thesajidalam"
+      }
+    }
+  ]
+}
