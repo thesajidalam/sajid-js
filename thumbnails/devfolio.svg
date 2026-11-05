@@ -1,0 +1,156 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1530"/>
+      <stop offset="1" stop-color="#1c1250"/>
+    </linearGradient>
+
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#22d3ee"/>
+      <stop offset="1" stop-color="#8b5cf6"/>
+    </linearGradient>
+
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#172b50"/>
+      <stop offset="1" stop-color="#17143c"/>
+    </linearGradient>
+
+    <linearGradient id="shine" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity=".24"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="640" height="360" fill="url(#bg)"/>
+  <circle cx="545" cy="55" r="155" fill="#8b5cf6" opacity=".08"/>
+  <circle cx="65" cy="300" r="180" fill="#22d3ee" opacity=".06"/>
+
+  <!-- Ambient glow -->
+  <ellipse cx="320" cy="155" rx="150" ry="105"
+           fill="#6366f1" opacity=".13" filter="url(#glow)"/>
+
+  <!-- Portfolio dashboard -->
+  <g transform="translate(320 148)">
+
+    <!-- Main window -->
+    <rect x="-132" y="-88" width="264" height="174"
+          rx="19" fill="url(#panel)"
+          stroke="#8b9dff" stroke-opacity=".35"/>
+
+    <rect x="-132" y="-88" width="264" height="174"
+          rx="19" fill="url(#shine)"/>
+
+    <!-- Window header -->
+    <path d="M-113 -88 H113 Q132 -88 132 -69 V-59 H-132 V-69 Q-132 -88 -113 -88Z"
+          fill="#ffffff" opacity=".055"/>
+
+    <circle cx="-112" cy="-73" r="4" fill="#22d3ee"/>
+    <circle cx="-98" cy="-73" r="4" fill="#8b5cf6"/>
+    <circle cx="-84" cy="-73" r="4" fill="#64748b"/>
+
+    <!-- Portfolio identity -->
+    <circle cx="-91" cy="-31" r="17"
+            fill="url(#accent)"/>
+
+    <path d="M-99 -30 L-92 -37 L-84 -30 L-92 -23Z"
+          fill="#fff" opacity=".95"/>
+
+    <rect x="-65" y="-39" width="91" height="6"
+          rx="3" fill="#e0e7ff" opacity=".9"/>
+    <rect x="-65" y="-27" width="64" height="4"
+          rx="2" fill="#94a3b8" opacity=".65"/>
+
+    <!-- Portfolio content -->
+    <rect x="-108" y="1" width="104" height="64"
+          rx="9" fill="#0b1530" opacity=".8"/>
+
+    <rect x="-96" y="12" width="45" height="4"
+          rx="2" fill="#22d3ee"/>
+
+    <rect x="-96" y="24" width="77" height="3"
+          rx="1.5" fill="#64748b"/>
+
+    <rect x="-96" y="34" width="66" height="3"
+          rx="1.5" fill="#64748b"/>
+
+    <rect x="-96" y="46" width="34" height="8"
+          rx="3" fill="url(#accent)"/>
+
+    <!-- Project preview -->
+    <rect x="7" y="1" width="94" height="64"
+          rx="9" fill="#0b1530" opacity=".8"/>
+
+    <rect x="18" y="12" width="72" height="37"
+          rx="5" fill="#253b66"/>
+
+    <path d="M28 38 L42 23 L55 33 L68 18 L81 38Z"
+          fill="url(#accent)" opacity=".9"/>
+
+    <rect x="18" y="55" width="44" height="3"
+          rx="1.5" fill="#94a3b8"/>
+
+    <!-- Score badge -->
+    <circle cx="105" cy="-53" r="37"
+            fill="#22d3ee" opacity=".12"
+            filter="url(#glow)"/>
+
+    <circle cx="105" cy="-53" r="32"
+            fill="#101c3b"
+            stroke="#33456d" stroke-width="5"/>
+
+    <circle cx="105" cy="-53" r="32"
+            fill="none" stroke="url(#accent)"
+            stroke-width="5" stroke-linecap="round"
+            stroke-dasharray="165 201"
+            transform="rotate(-90 105 -53)"/>
+
+    <text x="105" y="-49" text-anchor="middle"
+          font-family="Arial,sans-serif"
+          font-size="19" font-weight="700"
+          fill="#fff">92</text>
+
+    <text x="105" y="-37" text-anchor="middle"
+          font-family="Arial,sans-serif"
+          font-size="7" fill="#a5b4fc">SCORE</text>
+
+    <!-- Six evaluation points -->
+    <g transform="translate(0 111)">
+      <circle cx="-66" cy="0" r="10" fill="#22d3ee" opacity=".2"/>
+      <circle cx="-66" cy="0" r="4" fill="#22d3ee"/>
+
+      <circle cx="-40" cy="0" r="10" fill="#8b5cf6" opacity=".2"/>
+      <circle cx="-40" cy="0" r="4" fill="#8b5cf6"/>
+
+      <circle cx="-14" cy="0" r="10" fill="#22d3ee" opacity=".2"/>
+      <circle cx="-14" cy="0" r="4" fill="#22d3ee"/>
+
+      <circle cx="12" cy="0" r="10" fill="#8b5cf6" opacity=".2"/>
+      <circle cx="12" cy="0" r="4" fill="#8b5cf6"/>
+
+      <circle cx="38" cy="0" r="10" fill="#22d3ee" opacity=".2"/>
+      <circle cx="38" cy="0" r="4" fill="#22d3ee"/>
+
+      <circle cx="64" cy="0" r="10" fill="#8b5cf6" opacity=".2"/>
+      <circle cx="64" cy="0" r="4" fill="#8b5cf6"/>
+    </g>
+  </g>
+
+  <!-- Brand name -->
+  <text x="320" y="306"
+        font-family="Inter,Segoe UI,Arial,sans-serif"
+        font-size="30" font-weight="700"
+        fill="#ffffff" text-anchor="middle"
+        letter-spacing="-.8">DevFolio</text>
+
+  <text x="320" y="332"
+        font-family="Inter,Segoe UI,Arial,sans-serif"
+        font-size="12" font-weight="500"
+        fill="#a5b4fc" text-anchor="middle"
+        letter-spacing="1.1">Directory of Developer Portfolios</text>
+</svg>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#04242f"/>
+      <stop offset="1" stop-color="#081038"/>
+    </linearGradient>
+    <linearGradient id="tile" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2dd4bf"/>
+      <stop offset="1" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.4"/>
+      <stop offset="0.45" stop-color="#ffffff" stop-opacity="0.05"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" fill="url(#bg)"/>
+  <circle cx="560" cy="50" r="170" fill="#ffffff" opacity="0.05"/>
+  <circle cx="60" cy="330" r="210" fill="#2563eb" opacity="0.08"/>
+  <g transform="translate(320 158)">
+    <rect x="-108" y="-108" width="216" height="216" rx="52" fill="url(#tile)"/>
+    <rect x="-108" y="-108" width="216" height="216" rx="52" fill="url(#shine)"/>
+    <rect x="-108" y="-108" width="216" height="216" rx="52" fill="none" stroke="#ffffff" stroke-opacity="0.28" stroke-width="1.5"/>
+    <path d="M -50 -42 H50 A16 16 0 0 1 66 -26 V14 A16 16 0 0 1 50 30 H12 L -10 50 L -4 30 H-50 A16 16 0 0 1 -66 14 V-26 A16 16 0 0 1 -50 -42 Z" fill="#ffffff"/>
+    <circle cx="-26" cy="-6" r="8" fill="url(#tile)"/>
+    <circle cx="0" cy="-6" r="8" fill="url(#tile)"/>
+    <circle cx="26" cy="-6" r="8" fill="url(#tile)"/>
+  </g>
+  <text x="320" y="326" font-family="Segoe UI,Arial,sans-serif" font-size="27" font-weight="600" fill="#ffffff" fill-opacity="0.94" text-anchor="middle">SMSController</text>
+  <text x="320" y="350" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="500" fill="#7dd3fc" text-anchor="middle" opacity="0.9">Automated SMS Messaging</text>
+</svg>

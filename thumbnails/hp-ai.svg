@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#1C1C1F" rx="12"/>
+  <text x="200" y="100" text-anchor="middle" font-family="Inter, sans-serif" font-size="60" font-weight="bold" fill="#5D8A8A">🤖</text>
+  <text x="200" y="170" text-anchor="middle" font-family="Inter, sans-serif" font-size="16" fill="#A1A1AA">AI for Beginners</text>
+  <text x="200" y="200" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" fill="#52525B">HP LIFE</text>
+</svg>

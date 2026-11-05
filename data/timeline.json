@@ -1,0 +1,74 @@
+{
+  "items": [
+    {
+      "id": "started-coding",
+      "date": "2023-01-01",
+      "year": "2023",
+      "title": "Started Coding Journey",
+      "description": "Began learning HTML, CSS, and JavaScript out of sheer curiosity. Built first web pages and knew this was it.",
+      "category": "milestone",
+      "icon": "Code",
+      "highlight": false
+    },
+    {
+      "id": "first-project",
+      "date": "2023-06-01",
+      "year": "2023",
+      "title": "First GitHub Push",
+      "description": "Published my first project on GitHub. Started building a public portfolio of small apps and experiments — messy but mine.",
+      "category": "opensource",
+      "icon": "GitBranch",
+      "highlight": false
+    },
+    {
+      "id": "iot-exploration",
+      "date": "2024-01-01",
+      "year": "2024",
+      "title": "Entered IoT & Embedded",
+      "description": "Started experimenting with ESP8266 and Arduino. Built home automation projects — lights, sensors, relays. The physical world meets code.",
+      "category": "milestone",
+      "icon": "Cpu",
+      "highlight": false
+    },
+    {
+      "id": "hp-life-ambassador",
+      "date": "2024-12-01",
+      "year": "2024",
+      "title": "HP LIFE Ambassador",
+      "description": "Selected as an HP LIFE Ambassador to promote digital skills and entrepreneurship education in my community.",
+      "category": "certification",
+      "icon": "Award",
+      "highlight": true
+    },
+    {
+      "id": "started-btech",
+      "date": "2025-08-01",
+      "year": "2025",
+      "title": "Started B.Tech at UIT (AKTU)",
+      "description": "Began my B.Tech in Computer Science & Engineering at United Institute of Technology, Prayagraj — affiliated with Dr. A.P.J. Abdul Kalam Technical University.",
+      "category": "education",
+      "icon": "GraduationCap",
+      "highlight": true
+    },
+    {
+      "id": "hacktoberfest-2025",
+      "date": "2025-10-31",
+      "year": "2025",
+      "title": "Hacktoberfest 2025",
+      "description": "Contributed to open-source projects during Hacktoberfest and earned the official completion badge.",
+      "category": "opensource",
+      "icon": "GitBranch",
+      "highlight": true
+    },
+    {
+      "id": "smscontroller",
+      "date": "2025-11-20",
+      "year": "2025",
+      "title": "Built SMSController",
+      "description": "Released SMSController — an Android app for remote device control via SMS. My most technically ambitious project yet.",
+      "category": "milestone",
+      "icon": "Smartphone",
+      "highlight": true
+    }
+  ]
+}

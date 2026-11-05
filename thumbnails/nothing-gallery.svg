@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#241a1c"/>
+      <stop offset="1" stop-color="#12090c"/>
+    </linearGradient>
+    <linearGradient id="tile" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2e2e36"/>
+      <stop offset="1" stop-color="#1a1a22"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.22"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.03"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" fill="url(#bg)"/>
+  <circle cx="560" cy="50" r="180" fill="#ffffff" opacity="0.04"/>
+  <circle cx="60" cy="330" r="220" fill="#ff3b3b" opacity="0.07"/>
+  <g transform="translate(320 158)">
+    <rect x="-108" y="-108" width="216" height="216" rx="52" fill="url(#tile)"/>
+    <rect x="-108" y="-108" width="216" height="216" rx="52" fill="url(#shine)"/>
+    <rect x="-108" y="-108" width="216" height="216" rx="52" fill="none" stroke="#ffffff" stroke-opacity="0.18" stroke-width="1.5"/>
+    <rect x="-52" y="-46" width="104" height="100" rx="12" fill="none" stroke="#ffffff" stroke-width="8"/>
+    <path d="M -40 26 L -12 -8 L 8 18 L 20 4 L 40 26 Z" fill="#ffffff"/>
+    <circle cx="18" cy="-20" r="10" fill="#ffffff"/>
+    <circle cx="-32" cy="34" r="7" fill="#ff3b3b"/>
+    <circle cx="-14" cy="34" r="3.5" fill="#ffffff" opacity="0.45"/>
+    <circle cx="30" cy="34" r="3.5" fill="#ffffff" opacity="0.3"/>
+  </g>
+  <text x="320" y="326" font-family="Segoe UI,Arial,sans-serif" font-size="27" font-weight="600" fill="#ffffff" fill-opacity="0.95" text-anchor="middle">Nothing Gallery Port</text>
+  <text x="320" y="350" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="500" fill="#c7c7d4" text-anchor="middle" opacity="0.9">Nothing OS Gallery — Dot Matrix</text>
+</svg>

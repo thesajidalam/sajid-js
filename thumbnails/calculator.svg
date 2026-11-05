@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#062433"/>
+      <stop offset="1" stop-color="#0a1138"/>
+    </linearGradient>
+    <linearGradient id="tile" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#22d3ee"/>
+      <stop offset="1" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.4"/>
+      <stop offset="0.45" stop-color="#ffffff" stop-opacity="0.05"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" fill="url(#bg)"/>
+  <circle cx="560" cy="50" r="180" fill="#ffffff" opacity="0.05"/>
+  <circle cx="60" cy="330" r="220" fill="#2563eb" opacity="0.08"/>
+  <g transform="translate(320 158)">
+    <rect x="-108" y="-108" width="216" height="216" rx="52" fill="url(#tile)"/>
+    <rect x="-108" y="-108" width="216" height="216" rx="52" fill="url(#shine)"/>
+    <rect x="-108" y="-108" width="216" height="216" rx="52" fill="none" stroke="#ffffff" stroke-opacity="0.28" stroke-width="1.5"/>
+    <rect x="-36" y="-48" width="72" height="96" rx="11" fill="#ffffff"/>
+    <rect x="-28" y="-40" width="56" height="18" rx="4" fill="url(#tile)"/>
+    <circle cx="-18" cy="-6" r="5.5" fill="url(#tile)"/>
+    <circle cx="0" cy="-6" r="5.5" fill="url(#tile)"/>
+    <circle cx="18" cy="-6" r="5.5" fill="url(#tile)"/>
+    <circle cx="-18" cy="14" r="5.5" fill="url(#tile)"/>
+    <circle cx="0" cy="14" r="5.5" fill="url(#tile)"/>
+    <circle cx="18" cy="14" r="5.5" fill="url(#tile)"/>
+    <circle cx="-18" cy="34" r="5.5" fill="url(#tile)"/>
+    <circle cx="0" cy="34" r="5.5" fill="url(#tile)"/>
+    <circle cx="18" cy="34" r="5.5" fill="url(#tile)"/>
+  </g>
+  <text x="320" y="326" font-family="Segoe UI,Arial,sans-serif" font-size="27" font-weight="600" fill="#ffffff" fill-opacity="0.94" text-anchor="middle">Modern Calculator</text>
+  <text x="320" y="350" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="500" fill="#7dd3fc" text-anchor="middle" opacity="0.9">Sleek Everyday Calculator</text>
+</svg>

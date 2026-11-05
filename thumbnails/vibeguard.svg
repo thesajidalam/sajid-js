@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1530"/>
+      <stop offset="1" stop-color="#1c1250"/>
+    </linearGradient>
+    <linearGradient id="tile" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#22d3ee"/>
+      <stop offset="1" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.4"/>
+      <stop offset="0.45" stop-color="#ffffff" stop-opacity="0.05"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" fill="url(#bg)"/>
+  <circle cx="552" cy="52" r="180" fill="#ffffff" opacity="0.05"/>
+  <circle cx="70" cy="330" r="220" fill="#a78bfa" opacity="0.06"/>
+  <g transform="translate(320 158)">
+    <rect x="-108" y="-108" width="216" height="216" rx="52" fill="url(#tile)"/>
+    <rect x="-108" y="-108" width="216" height="216" rx="52" fill="url(#shine)"/>
+    <rect x="-108" y="-108" width="216" height="216" rx="52" fill="none" stroke="#ffffff" stroke-opacity="0.28" stroke-width="1.5"/>
+    <path d="M0 -54 C34 -42 48 -29 48 -7 L48 17 C48 40 27 52 0 60 C-27 52 -48 40 -48 17 L-48 -7 C-48 -29 -34 -42 0 -54 Z" fill="#ffffff"/>
+    <path d="M -25 2 L -8 19 L 26 -17" fill="none" stroke="#1c1250" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="320" y="326" font-family="Segoe UI,Arial,sans-serif" font-size="27" font-weight="600" fill="#ffffff" fill-opacity="0.94" text-anchor="middle">vibeguard</text>
+  <text x="320" y="350" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="500" fill="#a5b4fc" text-anchor="middle" opacity="0.9">AI Code Reality Check</text>
+</svg>
